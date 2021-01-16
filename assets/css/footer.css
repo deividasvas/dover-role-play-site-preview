@@ -1,0 +1,29 @@
+footer{
+    margin-top: 90px;
+    min-height: 250px;
+    display: grid;
+    width: 100%;
+    align-items: center;
+    background: #c12138;
+  }
+  footer .container{
+    margin-top: 50px;
+  }
+  
+  .creator a, .creator{
+    color: white;
+    text-decoration: none;
+  }
+  
+  footer .logo img{
+    width: 100px;
+  }
+  
+  .protected{
+    text-align: center;
+    color: white;
+  }
+
+  footer .info a{
+    color: white;
+  }

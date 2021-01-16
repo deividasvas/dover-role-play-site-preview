@@ -1,0 +1,176 @@
+@import url("./header.css");
+@import url("./footer.css");
+@import url("./elements.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+header {
+  padding-bottom: 20px;
+  background-size: cover;
+}
+section#one {
+  margin-top: 30px;
+}
+
+main {
+  margin-top: 50px;
+  width: 100%;
+}
+
+.question-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+@media(max-width: 992px){
+    .question-container {
+        display: block;
+        margin: 0;
+    }
+}
+
+.report-block {
+  color: white;
+  padding: 15px 40px;
+  border-radius: 8px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 100;
+}
+
+.add-report {
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.report-title {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+hr {
+  border: 1px solid #ccc;
+}
+
+.my-reports {
+  background: #0c3b96;
+}
+
+.form{
+    z-index: 100;
+}
+
+.reports {
+  overflow: scroll;
+  height: 500px;
+  margin: 10px 0;
+  padding-right: 10px;
+  max-width: 300px;
+}
+
+.my-reports.report-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.reports > div {
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.reports > div .name {
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.avatar img {
+  width: 40px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.question {
+  background: white;
+  padding: 15px;
+  width: 100%;
+  overflow: hidden;
+  /* width: 900px; */
+}
+
+.question .messages{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 700px;
+}
+
+.message {
+  display: flex;
+  margin-top: 15px;
+}
+
+.message-text {
+  background: #2D2828;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 15.5px;
+  color: white;
+  padding: 10px;
+  width: 370px;
+}
+
+.message-avatar img {
+  width: 45px;
+  border-radius: 7px;
+}
+
+.message-avatar {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  top: 30px;
+  right: 12px;
+}
+
+.message-my{
+    margin-left: 12px;
+}
+
+.message-user {
+  flex-direction: row-reverse;
+}
+
+.message-user .message-text {
+
+}
+
+.message-user{
+    margin-right: 12px;
+}
+.message-user .message-avatar{
+    right: -12px;
+}
+
+.form{
+    padding-top: 5px;
+    position: relative;
+    top: 10px;
+}
+
+.form form{
+    display: flex;
+    align-items: center;
+}
+
+.form-input{
+    margin: 0 10px;
+}
+
+
+main{
+    margin-top: 10px;
+}
+
+footer{
+    margin-top: 30px;
+}

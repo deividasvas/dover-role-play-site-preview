@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@font-face {
+  font-family: "Accuratist", sans-serif;
+  src: url(../fonts/Accuratist.ttf) format("truetype");
+}
+@font-face {
+	font-family: 'Acrom';
+	src: url('Acrom-Regular.eot');
+	src: local('Acrom Regular'), local('Acrom-Regular'),
+		url('Acrom-Regular.eot?#iefix') format('embedded-opentype'),
+		url('Acrom-Regular.woff') format('woff'),
+		url('Acrom-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.font66{
+  font-size: 66px;
+}
+
+.font92{
+  font-size: 92px;
+}
+
+.burger {
+  display: none;
+}
+
+.head-icon {
+  font-size: 14px;
+}
+
+.nav-element-link {
+  font-size: 17px;
+}
+
+header {
+  padding: 20px;
+  background: linear-gradient(
+      45deg,
+      rgba(103, 0, 31, 0.8),
+      rgba(34, 101, 163, 0.5)
+    ),
+    url(../../assets/img/backgroundHeader.jpg);
+  background-size: cover;
+}
+
+.header-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-element a {
+  color: white;
+  z-index: 1;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.nav-element:hover:after {
+  width: 100%;
+}
+
+.nav-element:after {
+  content: "";
+  width: 0%;
+  transition: width 0.5s;
+  height: 2px;
+  background: #ffde2a;
+  display: block;
+}
+
+header .contaienr {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 78px;
+  animation-name: logo;
+  animation-duration: alternate-reverse;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-duration: 4s;
+}
+
+@keyframes logo {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.auth-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+  background: #ffde2a;
+  transition: all 0.23333333s easy-in-out;
+  -webkit-transition: all 0.23333333s ease-in-out;
+  -moz-transition: all 0.23333333s ease-in-out;
+  color: black;
+}
+
+.auth-button:hover{
+  -webkit-box-shadow: 0px -1px 24px 6px rgba(255,222,42,1);
+  -moz-box-shadow: 0px -1px 24px 6px rgba(255,222,42,1);
+  box-shadow: 0px -1px 24px 6px rgba(255,222,42,1);
+}
+
+@media (max-width: 992px) { /* мобилы */
+    .burger {
+      display: flex;
+      justify-content: space-between;
+      z-index: 1002;
+    }
+    .header-navbar {
+      display: none;
+      transition: all 0.6s;
+    }
+    .header-navbar .logo {
+      display: none;
+    }
+    .active-navbar {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 80px;
+      justify-content: center;
+      background: #205eb1;
+      background-size: cover;
+      z-index: 1000;
+      position: fixed;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    .header-navbar div {
+      margin-top: 50px;
+      text-transform: uppercase;
+      font-family: "Open Sans", sans-serif;
+    }
+    .header-navbar div span {
+      margin-left: 5px;
+    }
+    .active-burger {
+      z-index: 2000;
+      position: fixed;
+      right: 30px;
+    }
+}
+
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .hamRotate.active {
+    transform: rotate(45deg);
+  }
+  .hamRotate180.active {
+    transform: rotate(180deg);
+  }
+  .line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: #000;
+    stroke-width: 5.5;
+    stroke-linecap: round;
+  }
+  .ham1 .top {
+    stroke-dasharray: 40 139;
+  }
+  .ham1 .bottom {
+    stroke-dasharray: 40 180;
+  }
+  .ham1.active .top {
+    stroke-dashoffset: -98px;
+  }
+  .ham1.active .bottom {
+    stroke-dashoffset: -138px;
+  }

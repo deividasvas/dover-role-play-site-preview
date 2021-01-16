@@ -1,0 +1,11 @@
+::-webkit-scrollbar {
+    width: 5.5px;
+}
+::-webkit-scrollbar-button {
+    display: none;
+    background: none;
+    color: none;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(82, 80, 80);
+}

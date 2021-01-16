@@ -1,0 +1,288 @@
+@import url('./header.css');
+@import url('./elements.css');
+@import url('./footer.css');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+header{
+  padding-bottom: 60px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+main:before {
+    content: "";
+    background: url(../img/color.png);
+    width: 100%;
+    height: 250px;
+    top: 60px;
+    background-size: 100% 100%;
+    position: absolute;
+    pointer-events: none;
+}
+
+main{
+    margin-top: 125px;
+}
+
+.avatar img{
+    width: 140px;
+    border-radius: 5px;
+}
+
+.nickname{
+    font-family: "Oswald", sans-serif !important;
+    font-weight: 100;
+    font-size: 32px;
+    margin-top: 5px;
+}
+
+.red-block{
+    border-radius: 7px;
+    padding: 15px 55px;
+    background: #FF4A4A;
+    color: #F1EBEB;
+    font-family: "Oswald", sans-serif !important;
+    font-weight: 100;
+    text-align: center;
+}
+
+.yellow-block{
+    border-radius: 7px;
+    padding: 15px 70px;
+    background: #FFDE2A;
+    font-family: "Oswald", sans-serif !important;
+    font-weight: 100;
+    text-align: center;
+}
+
+.block-none{
+    opacity: 0.3;
+    color: #e0e0e0 !important;
+    cursor: not-allowed;
+}
+
+.block-none:hover{
+    background: #2D2828 !important;
+}
+
+.main-stats{
+    margin-top: 10px;
+    /* margin-right: 10px; */
+}
+.main-stats > div.red-block {
+    margin: 0px 60px;
+}
+
+.main-stats > div {
+    font-size: 20px;
+}
+
+.buttons{
+    margin-top: 25px;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(3, 230px);
+    row-gap: 20px;
+}
+.button-lc{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.button-lc{
+    padding: 13px;
+    background: #2D2828;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.button-lc:hover{
+    color: white;
+    background: #ff428e;
+}
+
+.stats{
+    margin-top: 50px;
+}
+
+.lc-title{
+    font-family: "Oswald", sans-serif !important;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.params{
+    margin-top: 10px;
+}
+
+.stats-block{
+    font-family: "Oswald", sans-serif !important;
+}
+
+.stats-block span{
+    display: flex;
+    font-size: 18px;
+}
+
+.stats-block span div {
+    margin-left: 4px;
+}
+
+.licenses-skills{
+    margin-top: 10px;
+}
+
+.stats-block{
+    margin-left: 50px;
+}
+
+.lic-skills .skills{
+    margin-left: 50px;
+}
+
+.lic-skills:first-child{
+    margin-right: 50px;
+}
+
+.licenses-skills{
+    margin-top: 30px;
+}
+
+.lic-skills{
+    align-items: center;
+    margin-top: 10px;
+}
+
+.licenses > div{
+    display: flex;
+    margin-top: 5px;
+}
+
+.licenses > div .lic-name{
+    font-family: 'Source Code Pro', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-left: 3px;
+    margin-bottom: 2px;
+}
+
+.lic-status img{
+    width: 29px;
+}
+.licenses{
+    margin-bottom: auto;
+}
+.skills > div{
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+}
+.gun-progress{
+    margin-left: 4px;
+    width: 130px;
+    height: 6px;
+    border-radius: 50px;
+    background: #30313E;
+}
+
+.gun-progress .skill{
+    width: 54%;
+    height: 6px;
+    border-radius: 50px;
+    background: #ff428e;
+}
+
+.button-exit{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.lc-exit{
+    border: none;
+    outline: none;
+    background-color: #FFDE2A;
+    transition: all .3s;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    padding: 16px 100px;
+}
+
+.lc-exit:hover{
+    background: #ff428e;
+    color: white;
+}
+
+#one{
+    margin: 200px 0;
+}
+
+main:after{
+    content: '';
+    background: url(../img/color.png);
+    width: 100%;
+    height: 300px;
+    top: 1600px;
+    background-size: 100% 100%;
+    position: absolute;
+    pointer-events: none;
+}
+
+@media(max-width: 992px){
+    main:after, main:before{
+        display: none;
+    }
+    .main-stats{
+        display: grid !important;
+    }
+    .yellow-block{
+        padding: 15px 55px !important;
+    }
+    .main-stats > div:first-child{
+        margin-top: 0 !important;
+    }
+    .main-stats > div{
+        margin-top: 20px !important;
+    }
+    .main-stats > div.yellow-block {
+        margin: 0px 60px;
+    }
+    .buttons{
+        grid-template-columns: none;
+        margin-top: 50px;
+    }
+    .buttons:before{
+        content: '';
+        height: 1px;
+        background: #ccc;
+        border-radius: 50px;
+    }
+    .buttons:after{
+        content: '';
+        height: 1px;
+        background: #ccc;
+        border-radius: 50px;
+    }
+    .params{
+        display: grid !important;
+    }
+    .params > div{
+        margin-top: 20px;
+    }
+    .lic-skills{
+        display: grid !important;
+    }
+    .lic-skills > div{
+        margin-left: 0 !important;
+    }
+    .skills{
+        margin-top: 20px;
+    }
+}
